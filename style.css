@@ -1,0 +1,552 @@
+/* Resetando algumas configurações padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(to bottom, #000000, #1d2a3d); /* Degradê de preto para azul escuro */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  max-height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #ffb100;
+}
+
+nav ul li a.active {
+  background-color: #ffb100;
+  color: #222;
+}
+
+/* Seção Hero (Banner inicial) */
+/* Página principal - Melhorias */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh; /* Mais altura para dar destaque */
+  padding: 40px;
+  position: relative;
+  background: linear-gradient(to bottom, #000000, #1d2a3d);
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  color: #ffb100;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+
+.cta-button {
+  background-color: #ffb100;
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #222;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #e09b00;
+}
+
+/* Container do notebook */
+.notebook-container {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slideUp 1s ease-in-out forwards;
+  z-index: 10;
+  width: 350px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+/* Animação de slide */
+@keyframes slideUp {
+  0% {
+    transform: translateX(-50%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%) translateY(-30%);
+  }
+}
+
+/* Container do notebook */
+.notebook-container {
+  position: absolute;
+  bottom: -10%; /* Garante que o notebook comece abaixo da seção */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slideUp 1s ease-in-out forwards; /* Animação de movimento para cima */
+  width: 300px; /* Ajuste a largura do notebook conforme necessário */
+}
+
+/* Estilos do notebook */
+.notebook {
+  width: 100%;
+  height: 200px;
+  background-color: #333;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.screen {
+  width: 90%;
+  height: 80%;
+  background-color: #111;
+  border-radius: 10px;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.screen-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.screen-content p {
+  font-size: 16px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Rodapé */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+  /* Seção de Planos */
+  .pricing {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .pricing h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #fff;
+  }
+  
+  .planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .plano {
+    background-color: #1d2a3d;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .plano:hover {
+    transform: translateY(-10px);
+  }
+  
+  .plano h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .preco {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .btn-assinatura {
+    background-color: #ffb100;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #222;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-assinatura:hover {
+    background-color: #e09b00;
+  }
+
+  /* Estilo para a página de Planos */
+.plans {
+  padding: 60px 20px;
+  text-align: center;
+  background: #1d2a3d;
+}
+
+.plans h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #ffb100;
+}
+
+.plan-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background-color: #333;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px); /* Efeito de "flutuar" ao passar o mouse */
+}
+
+.plan-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.plan-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffb100;
+  margin-bottom: 20px;
+}
+
+.plan-card ul {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.plan-card ul li {
+  margin-bottom: 10px;
+}
+
+.plan-card .cta-button {
+  background-color: #ffb100;
+  color: #222;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.plan-card .cta-button:hover {
+  background-color: #e09b00;
+}
+
+/* Destaque para o plano mais popular */
+.plan-card.popular {
+  border: 2px solid #ffb100;
+  box-shadow: 0px 10px 30px rgba(255, 179, 0, 0.6);
+}
+
+  
+  /* Seção de Download */
+  .download {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .download h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 2em;
+    line-height: 2.5em;
+  }
+  
+  .download-buttons .btn-download {
+    background-color: #ffb100;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #222;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-buttons .btn-download:hover {
+    background-color: #e09b00;
+  }
+
+  /* Estilo para a página de Download */
+.download {
+  padding: 60px 20px;
+  text-align: center;
+  background: #1d2a3d;
+}
+
+.download h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #ffb100;
+}
+
+.download p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.download-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.download-button {
+  background-color: #ffb100;
+  color: #222;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.download-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.download-button:hover {
+  transform: scale(1.1);
+}
+
+  
+  /* Seção de Sobre */
+  /* Estilo para a página Sobre */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background: #1d2a3d;
+}
+
+.about h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #ffb100;
+}
+
+.about p {
+  font-size: 20px;
+  color: #fff;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .sobre p2 {
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 5em;
+  }
+  
+  /* Seção de Suporte */
+  .suporte {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .suporte h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .suporte form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .suporte input,
+  .suporte textarea {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .suporte textarea {
+    min-height: 150px;
+  }
+  
+  .suporte button {
+    background-color: #ffb100;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #222;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .suporte button:hover {
+    background-color: #e09b00;
+  }
+  
+  /* Estilos para a seção de Suporte */
+.support {
+  padding: 40px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.support-content {
+  margin-top: 20px;
+}
+
+.support form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support label {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.support input, .support textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.support button {
+  background-color: #ffb100;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #222;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.support button:hover {
+  background-color: #e09b00;
+}
+
+/* Mensagem de confirmação */
+#confirmationMessage {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  display: none; /* Esconde a mensagem inicialmente */
+}
+
+.hidden {
+  display: none;
+}
+
+  /* Rodapé */
+  footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+  }
+  

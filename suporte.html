@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zenit - Suporte</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script> <!-- Incluindo o script JavaScript -->
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo Zenit">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="suporte.html" class="active">Suporte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="support">
+    <div class="support-content">
+      <h1>Fale Conosco</h1>
+      <p>Preencha o formulário abaixo para entrar em contato com nossa equipe de suporte.</p>
+
+      <!-- Formulário de Suporte -->
+      <form id="supportForm">
+        <label for="name">Seu Nome:</label>
+        <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+
+        <label for="email">Seu E-mail:</label>
+        <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required placeholder="Digite sua mensagem"></textarea>
+
+        <button type="submit" id="sendButton">Enviar</button>
+      </form>
+
+      <!-- Mensagem de sucesso -->
+      <div id="confirmationMessage" class="hidden">
+        <p>Mensagem enviada! Resolveremos seu problema o mais rápido possível.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Zenit - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
